@@ -1,4 +1,7 @@
 target/
+RemoteSystemsTempFiles/
+Servers/
+
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -7,6 +10,15 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-
+mvnw*
+mvnw.cmd
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+.mvn/
+.metadata/
+.recommenders/
+.DS_Store
+.git/
+.classpath
+.project
+.settings
