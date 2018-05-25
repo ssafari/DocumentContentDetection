@@ -177,7 +177,7 @@ public class TextEntitiesProcessor {
 	      //personFinder();
 		String[] sentenses = sentenseProvider("resume.txt");
 		for (int i = 0; i < sentenses.length; i++)
-			System.out.printf("line nb[{}]: {} \n", i, sentenses[i]);
+			System.out.println("line nb ["+i+"]: "+sentenses[i]);
 		
 		try {
 			chunk();

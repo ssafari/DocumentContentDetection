@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EntityRecognitionProjectApplication {
+public class ContentDetectionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EntityRecognitionProjectApplication.class, args);
+		SpringApplication.run(ContentDetectionApplication.class, args);
 	}
 }
