@@ -1,4 +1,17 @@
-				Sepehr Safari
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="X-Parsed-By" content="org.apache.tika.parser.DefaultParser" />
+<meta name="X-Parsed-By" content="org.apache.tika.parser.html.HtmlParser" />
+<meta name="X-Parsed-By" content="org.apache.tika.parser.DefaultParser" />
+<meta name="X-Parsed-By" content="org.apache.tika.parser.txt.TXTParser" />
+<meta name="dc:title" content="" />
+<meta name="Content-Encoding" content="ISO-8859-1" />
+<meta name="Content-Encoding" content="ISO-8859-1" />
+<meta name="Content-Type-Hint" content="text/plain; charset=ISO-8859-1" />
+<meta name="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+<title></title>
+</head>
+<body><p>				Sepehr Safari
 _____________________________________________________________________________
 2345 starowrd drive
 Mclean, VA 32131
@@ -36,3 +49,6 @@ Project Management Professional
 Educations:
 Bc. in Engineering
 
+</p>
+
+</body></html>

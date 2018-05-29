@@ -1,14 +1,21 @@
 package com.doveltech.nrp;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.nio.charset.Charset;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.tika.exception.TikaException;
+import org.xml.sax.SAXException;
+
+import com.doveltech.dao.FileAccessUtils;
 
 import opennlp.tools.chunker.ChunkerME;
 import opennlp.tools.chunker.ChunkerModel;
@@ -73,6 +80,34 @@ public class TextEntitiesProcessor {
 		}
 		return null;
 	}
+	
+	public static void chunk(String sentence) {
+		String whitespaceTokenizerLine[] = null;
+		String[] tags = null;
+
+		POSModel model = new POSModelLoader().load(getModelFile("en-pos-maxent.bin"));
+		POSTaggerME tagger = new POSTaggerME(model);
+		whitespaceTokenizerLine = WhitespaceTokenizer.INSTANCE.tokenize(sentence);
+		tags = tagger.tag(whitespaceTokenizerLine);
+
+		POSSample sample = new POSSample(whitespaceTokenizerLine, tags);
+		System.out.println("Sample: "+sample.toString());
+
+		// chunker
+		/*ChunkerModel cModel = new ChunkerModelLoader().load(getModelFile("en-chunker.bin"));
+
+		ChunkerME chunkerME = new ChunkerME(cModel);
+		String result[] = chunkerME.chunk(whitespaceTokenizerLine, tags);
+		System.out.println("Chunker results: ");
+		for (String s : result)
+			System.out.println(s);
+
+		System.out.println("span results: ");
+		Span[] span = chunkerME.chunkAsSpans(whitespaceTokenizerLine, tags);
+		for (Span s : span)
+			System.out.println(s.toString());*/
+	}
+	
 	
 	/**
 	 * 
@@ -175,7 +210,48 @@ public class TextEntitiesProcessor {
 	
 	public static void main(String args[]) {        
 	      //personFinder();
-		String[] sentenses = sentenseProvider("resume.txt");
+		SentenceModel model;
+		SentenceDetectorME sentenceDetector;
+		
+		try {
+			File file = FileAccessUtils.parseToHTMLUsingApacheTikka(System.getProperty("user.dir")+"/models/resume.txt");
+			FileInputStream fis = new FileInputStream(file);
+			//Construct BufferedReader from InputStreamReader
+			BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+			String line = null;
+			while ((line = br.readLine()) != null) {
+					System.out.println(line);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (TikaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*try {
+			model = new SentenceModel(getModelFile("en-sent.bin"));
+			sentenceDetector = new SentenceDetectorME(model);
+			List<String> str = FileAccessUtils.getBufferLine("resume.txt");
+			for (String line : str) {
+				//System.out.println(line);
+				String[] sentenses = sentenceDetector.sentDetect(line);
+				for (int i = 0; i < sentenses.length; i++) {
+					System.out.println("line nb ["+i+"]: "+sentenses[i]);
+					chunk(sentenses[i]);
+				}
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} */
+		
+		
+		/*String[] sentenses = sentenseProvider("resume.txt");
 		for (int i = 0; i < sentenses.length; i++)
 			System.out.println("line nb ["+i+"]: "+sentenses[i]);
 		
@@ -184,7 +260,7 @@ public class TextEntitiesProcessor {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}    
 	
 }
