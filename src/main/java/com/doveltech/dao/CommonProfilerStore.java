@@ -13,6 +13,7 @@ import java.util.TreeMap;
 
 public class CommonProfilerStore {
 
+	public static final String[] TAGS = {"",""};
 	private final HashMap<String, String> missedProfiles;
 	private final TreeMap<String, String> profileStore;
 
@@ -60,7 +61,7 @@ public class CommonProfilerStore {
 
 				String line = null;
 				while ((line = br.readLine()) != null) {
-					System.out.println(line);
+					//System.out.println(line);
 					profileStore.put(line.toLowerCase(), file.getName().split("\\.")[0].toLowerCase());
 				}
 				br.close();
