@@ -44,7 +44,7 @@ public final class FileAccessUtils {
 			if (p.matcher(line).find()) {
 				
 				System.out.println(line.replaceAll("[^A-Za-z0-9\\. ]", ""));
-				doc.add(line.replaceAll("[^A-Za-z0-9\\. ]", ""));
+				doc.add(line.replaceAll("[^A-Za-z0-9,\\. ]", ""));
 			}
 		}
 		br.close();

@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-
 import com.doveltech.dao.CommonProfilerStore;
 import com.doveltech.dao.FileAccessUtils;
 import com.doveltech.nrp.utils.StringRecognitionUtils;
@@ -15,8 +13,6 @@ import com.doveltech.nrp.utils.StringRecognitionUtils;
 
 
 public class TextEntitiesProcessor {
-	public static final String sentence = "Mike is senior programming manager and Jon is a clerk both are working at Tutorialspoint"; 
-	
 	
 	public static void main(String args[]) {        
 		String tag = "generic";
@@ -32,7 +28,6 @@ public class TextEntitiesProcessor {
 				if (sent.length == 1) {
 					String profile = null;
 					if ((profile = cProfiles.findProfile(sent[0])) != null) {
-						//System.out.println(profile);
 						tag = profile;
 						if (slider.get(tag) == null)
 							slider.put(tag, new ArrayList<String>());
@@ -43,7 +38,6 @@ public class TextEntitiesProcessor {
 					}
 				} else {
 					for (int i = 0; i < sent.length; i++) {
-						//System.out.println("line nb ["+i+"]: "+sent[i]);
 						slider.get(tag).add(sent[i]);
 					}
 				}

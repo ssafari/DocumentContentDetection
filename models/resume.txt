@@ -10,9 +10,9 @@ Many years experience in networking. Worked for fortun 500 companies.
 
 Technical Skills:
 
-Computer engineering.
-Computer programming.
-Java, Python
+Open sources:  ODL, Netflix OSS.
+Operating Systems:  Linux, mac.
+Languages:  Java, Python, PHP.
 
 
 Work experiences:
