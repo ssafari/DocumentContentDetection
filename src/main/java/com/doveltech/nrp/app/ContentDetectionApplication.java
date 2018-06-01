@@ -1,4 +1,4 @@
-package com.doveltech.nrp;
+package com.doveltech.nrp.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

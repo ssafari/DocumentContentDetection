@@ -1,0 +1,78 @@
+                                                                                                                                                    
+                                                                                             Graduate          Student                              
+                                                                                                      Technical                                     
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                 Peter  M.  Chu                                                                     
+                      Current Address:                           pmc9001@cornell.edu           Permanent Address:                                   
+                      112 Sage  Place,  Room 911                                               134 West  53rd  Avenue                               
+                      Ithaca,  NY 14850-4479                                                   Vancouver,  BC,  Canada  V5Y  2W2                    
+                      (607)  227-6051                                                          (778)  320-7097                                      
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                      OBJECTIVE          A full-time  software-development  position,  preferably  related  to  systems  or web  applications       
+                                                                                                                                                    
+                      EDUCATION          Cornell  University,  College of  Engineering, Ithaca,  NY  May  2012                                      
+                                         Master  of Engineering  in  Computer Science                                                               
+                                                                                                                                                    
+                                         University  of British  Columbia,  Vancouver, BC,  Canada  May 2011                                        
+                                         Bachelor  of Applied  Science in  Computer  Engineering,  with  Distinction                                
+                                         Software Engineering Option • Minor in Commerce                                                            
+                                                                                                                                                    
+                        Honors and       Dean’s List • Undergraduate Scholar Program Scholarship • Association of Professional Engineers            
+                        Awards             and Geoscientists Scholarship • Alexander Memorial Scholarship • Golden Key International Honour         
+                                         Society                                                                                                    
+                                                                                                                                                    
+                        Relevant         Design of Distributed Software Applications • Advanced Topics on Computer Systems • System Security        
+                        Courses            Operating and File Systems • Introduction to Relational Databases • Software Engineering • Software      
+                                         Project Management • Empirical Methods in Machine Learning and Data Mining • Computer Graphics             
+                                                                                                                                                    
+                      RELATED            Programmer Intern                                     June  2009-May  2010                                 
+                      EXPERIENCE         Denseisha  Co.  Ltd., Kumamoto  City,  Kumamoto Prefecture,  Japan                                         
+                                         •    Designed, developed, and tested J2EE application for monitoring state of multiple web servers, using  
+                                            Seasar  (dependency  injection)  and  Hibernate  (persistence).                                         
+                                         •    Implemented blogging feature on one of Oita Prefectural Tourist Association’s websites.               
+                                                                                                                                                    
+                                         Programmer Analyst                                    September  2007-August  2008                         
+                                         Northwood  Pulp  Mill, Canadian  Forest  Products,  Prince  George,  BC,  Canada                           
+                                         •    Created two ASP.NET web applications: one for analyzing historical production data stored in a        
+                                            database,  and one  for  storing  daily  reports  on environmental  incidents.                          
+                                         •    Maintained two other ASP web applications and made improvements based on user requests.               
+                                         •    Created over ten business reports in Crystal Reports (CR) format.                                     
+                                         •    Recognized as one of most knowledgeable CR developers within Pulp and Paper IT department.            
+                                                                                                                                                    
+                                         Volunteer  Programmer                                 May-August  2007                                     
+                                         Everlasting  Business  Solutions,  Richmond,  BC,  Canada                                                  
+                                         •    Programmed and tested Delphi-based application for scheduling appointments; developed                 
+                                            associated  user documentation.                                                                         
+                                         •    Wrote test plan and performed testing on two other software products.                                 
+                                                                                                                                                    
+                      OTHER              Service  Center  Assistant                            September  2011-Present                              
+                      EXPERIENCE         Graduate  & Professional  Student Housing,  Cornell  University,  Ithaca,  NY                              
+                                                                                                                                                    
+                                         International  Affairs  Committee  Member             July  2009-May  2010                                 
+                                         Kumamoto Yamanami  Rotaract  Club, Kumamoto  City,  Kumamoto Prefecture,  Japan                            
+                                                                                                                                                    
+                                         Secretary                                             September  2008-May  2009                            
+                                         Vanland  Holdings  Ltd., Vancouver,  BC,  Canada                                                           
+                                                                                                                                                    
+                      SPECIALIZED        Programming Languages: C, C++, Delphi, Java (J2EE, J2SE), SQL, VB, VB.NET                                  
+                      SKILLS             Web Development:  ASP,  ASP.NET,  ColdFusion,  HTML,  JavaScript, PHP,  VB  Script                         
+                                         Tools:  Crystal  Reports,  Delphi  Quick  Reports,  Impromptu,  Matlab                                     
+                                         Languages:  Fluent  in  Cantonese  and  Mandarin;  Proficient  in  Japanese                                
+                                                                                                                                                    
+                      PROFESSIONAL       Association for Computing Machinery  •  Association of Professional Engineers and Geoscientists            
+                      AFFILIATIONS       of  British  Columbia  (Student Member)                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                           58                                                                       
+                                                                 Cornell  Career  Services                                                          

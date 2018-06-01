@@ -3,7 +3,9 @@ package com.doveltech.nrp.utils;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import com.doveltech.dao.FileAccessUtils;
+import java.util.Iterator;
+import java.util.List;
+
 import opennlp.tools.chunker.ChunkerME;
 import opennlp.tools.chunker.ChunkerModel;
 import opennlp.tools.cmdline.PerformanceMonitor;
@@ -82,6 +84,31 @@ public class StringRecognitionUtils {
 		for(Span s: nameSpans)        
 			System.out.println(s.toString()+"  "+tokens[s.getStart()]); 
 	}
+	public static void lineChunker(Iterator<String> iter) {
+		String whitespaceTokenizerLine[] = null;
+		String[] tags = null;
+		
+		ChunkerModel cModel = new ChunkerModelLoader().load(FileAccessUtils.retrieveFile("en-chunker.bin"));
+		POSModel model = new POSModelLoader().load(FileAccessUtils.retrieveFile("en-pos-maxent.bin"));
+		POSTaggerME tagger = new POSTaggerME(model);
+		
+		while (iter.hasNext()) {
+			whitespaceTokenizerLine = WhitespaceTokenizer.INSTANCE.tokenize(iter.next());
+			tags = tagger.tag(whitespaceTokenizerLine);
+			POSSample sample = new POSSample(whitespaceTokenizerLine, tags);
+			System.out.println(sample.toString());
+			
+		}
+		ChunkerME chunkerME = new ChunkerME(cModel);
+		String result[] = chunkerME.chunk(whitespaceTokenizerLine, tags);
+	 
+		for (String s : result)
+			System.out.println(s);
+	 
+		/*Span[] span = chunkerME.chunkAsSpans(whitespaceTokenizerLine, tags);
+		for (Span s : span)
+			System.out.println(s.toString());*/
+	}
 	
 	/**
 	 * 
@@ -97,7 +124,7 @@ public class StringRecognitionUtils {
 		PerformanceMonitor perfMon = new PerformanceMonitor(System.err, "sent");
 		POSTaggerME tagger = new POSTaggerME(model);
 	 
-		InputStreamFactory isf = new MarkableFileInputStreamFactory(FileAccessUtils.retrieveFile(fileName));
+		InputStreamFactory isf = new MarkableFileInputStreamFactory(FileAccessUtils.fileFormatHandler(fileName));
 		ObjectStream<String> lineStream = new PlainTextByLineStream(isf, Charset.forName("UTF-8"));
 	 
 		perfMon.start();
@@ -129,28 +156,23 @@ public class StringRecognitionUtils {
 	 * 
 	 * @throws IOException
 	 */
-	@SuppressWarnings("resource")
 	public static void POSTag(String line) throws IOException {
-		//String line;
-		//ObjectStream<String> lineStream;
 		
 		POSModel model = new POSModelLoader().load(FileAccessUtils.retrieveFile("en-pos-maxent.bin"));
-		//PerformanceMonitor perfMon = new PerformanceMonitor(System.err, "sent");
 		POSTaggerME tagger = new POSTaggerME(model);
-	 
-		//InputStreamFactory isf = new MarkableFileInputStreamFactory(FileAccessUtils.retrieveFile(fileName));
-		//lineStream = new PlainTextByLineStream(isf, Charset.forName("UTF-8"));
-	 
-		//perfMon.start();
+		String whitespaceTokenizerLine[] = WhitespaceTokenizer.INSTANCE.tokenize(line);
+		String[] tags = tagger.tag(whitespaceTokenizerLine);
+		POSSample sample = new POSSample(whitespaceTokenizerLine, tags);
+		System.out.println(sample.getSentence()[0]);
 		
-		//while ((line = lineStream.read()) != null) {
-			String whitespaceTokenizerLine[] = WhitespaceTokenizer.INSTANCE.tokenize(line);
-			String[] tags = tagger.tag(whitespaceTokenizerLine);
-			POSSample sample = new POSSample(whitespaceTokenizerLine, tags);
-			System.out.println(sample.toString());
-			//perfMon.incrementCounter();
-		//}
-		//perfMon.stopAndPrintFinalResult();
 	}
 	
+	public static void main(String args[]) { 
+		try {
+			chunk("Resume_Federal_Erika_Ogilvy.pdf");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

@@ -17,12 +17,14 @@ Languages:  Java, Python, PHP.
 
 Work experiences:
 
-Cisco Systems Inc.                                       Jan 2001 - Jan 2012
+Sr. Software engineer
+Cisco Systems Inc.                                       Jan 2001 - Sep 2012
 
 Responsible for many different networking projects.
 
 
-IBM Inc.                                                 Sep 2012 - Sep 2016
+Technical lead
+IBM Inc.                                                 Sep 2012 - Oct 2016
 
 Working on midrange computer system, such as developing and maintaining.
 
