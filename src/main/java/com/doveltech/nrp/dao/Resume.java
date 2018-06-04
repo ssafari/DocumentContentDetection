@@ -5,45 +5,34 @@ import java.util.List;
 
 public class Resume {
 
-	private String firstName;
-	private String lastName;
+	private String fullName;
 	
-	private Address address;
+	private String address;
 	
 	private String email;
 	private String phone;
 	
 	private List<Company> companies;
 	private List<String> skills;
-	
 	private List<String> certificates;
-	
 	
 	public Resume() {
 		super();
 	}
 	
-	public String getFirstName() {
-		return firstName;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFullName(String firstName) {
+		this.fullName = firstName;
 	}
 
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Address getAddress() {
+	public String getAddress() {
 		return address;
 	}
 
-	public void setAddress(Address address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
 
@@ -63,17 +52,20 @@ public class Resume {
 		this.phone = phone;
 	}
 
-	public void setCompany(String name, String duration, String title) {
-		if (companies == null) 
-			companies = new ArrayList<Company>();
-		Company cp = new Company(name, duration, title);
-		companies.add(cp);
+	public void setCompanies(Company cy) {
+		if (this.companies == null)
+			this.companies = new ArrayList<Company>();
+		companies.add(cy);
 	}
-
-	public void setAddress(String street, String state, String unit, 
-			               String city, String country, String code) {
-		Address addr = new Address(street,state,unit,city,country,code);
-		setAddress(addr);
+	
+	public Company findCompany(String cname) {
+		if (companies == null)
+			return null;
+		for (Company cy : companies) {
+			if (cname.compareTo(cy.getName()) == 0)
+				return cy;
+		}
+		return null;
 	}
 	
 	public void setSkills(String skill) {

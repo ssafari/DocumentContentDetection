@@ -2,6 +2,9 @@
 _____________________________________________________________________________
 2345 starowrd drive
 Mclean, VA 32131
+Tel: (408)515-1636
+Email: sndsoft@gmail.com
+www.ssafari.com
 ----------------------------------------------------------------------------
 Summary of Qualifications:
 
@@ -21,10 +24,21 @@ Sr. Software engineer
 Cisco Systems Inc.                                       Jan 2001 - Sep 2012
 
 Responsible for many different networking projects.
-
+Upsell products and services to increase company revenue by 10% beyond company targets.
 
 Technical lead
 IBM Inc.                                                 Sep 2012 - Oct 2016
+
+Managed call flow and responded to technical support needs of customers.
+Demonstrated professionalism and courtesy with customers at all times.
+Created cases and claims for damaged, lost, or displaced purchases.
+
+Principal Software Engineer
+Neustar                                                  oct 2016 - apr 2018
+
+Resolve problems with malfunctioning products and general support issues.
+Remain up-to-date on the latest technologies and solutions applicable to company products.
+Upsell products and services to increase company revenue by 10% beyond company targets.
 
 Working on midrange computer system, such as developing and maintaining.
 

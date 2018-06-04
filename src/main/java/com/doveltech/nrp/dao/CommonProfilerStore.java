@@ -33,7 +33,7 @@ public class CommonProfilerStore {
 	
 	ArrayList<String> c_entity = new ArrayList<>(
 			Arrays.asList("limited.", "inc.", "ltd.", "corp.", "corporation.", "co.",
-						  "limited", "inc", "ltd", "corp", "corporation", "co"));
+						  "limited", "inc", "ltd", "corp", "corporation", "co", "systems"));
 	
 	
 	
@@ -51,7 +51,7 @@ public class CommonProfilerStore {
 		for (int i = 0; i < tokens.length; i++) {
 			name = name+" "+tokens[i];
 			if (c_entity.contains(tokens[i].toLowerCase())) {
-				return name;
+				return str;
 			}
 		}
 		return null;

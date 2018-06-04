@@ -60,7 +60,7 @@ public final class FileAccessUtils {
 					String st = tokens[i].replaceAll("[^A-Za-z0-9,-@\\.\\w]", " ");
 					st = st.trim();
 					if (!st.isEmpty()) {
-						System.out.println("==>"+st.trim());
+						//System.out.println("==>"+st.trim());
 						doc.add(st);
 					}
 				}
